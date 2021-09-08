@@ -1,0 +1,19 @@
+ul{
+    list-style: none;
+}
+
+main{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.493);
+    background-image: url(../img/thumb-1920-26105.jpg);
+    background-repeat: no-repeat;
+}
+
+#ms_card-img img{
+    width: 100%;
+}
+
+#ms_title h1{
+    font-weight: 800;
+    color:white;
+}
