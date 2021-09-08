@@ -1,11 +1,12 @@
 let myMagicCard = { //Card description and caracteristics
-
+    id : 88,
     name : 'Bloodfire Colossus',
     manaCost : [ 6, 'R', 'R'],
-    type : 'creature',
+    totalManaCost : 8,
+    type : 'Creature',
     subType : 'Giant',
     edition : 9,
-    rarity : 'rare',
+    rarity : 'Rare',
     text : {
 
         ability :{
@@ -30,6 +31,34 @@ let myMagicCard = { //Card description and caracteristics
     number : 177,
     strenght : 6,
     constitution : 6,
-    border : 'black',
+    border : 'Black',
     image: 'img/myCardImage.jpeg'
 }
+
+let cardHTML = 
+`<img src="${myMagicCard.image}" placeholder=" BloodFireColossusCard ">
+<ul class="card-element">
+    <li>Database id: ${myMagicCard.id}</li>
+    <li>Name: ${myMagicCard.name}</li>
+    <li>Launch cost: ${myMagicCard.manaCost.join(', ')}</li>
+    <li>Total mana cost: ${myMagicCard.totalManaCost}</li>
+    <li>Type: ${myMagicCard.type} ${myMagicCard.subType}</li>
+    <li>Expansion: ${myMagicCard.edition}</li>
+    <li>Rarity: ${myMagicCard.rarity}</li>
+    <li>Card ability: ${myMagicCard.text.ability}
+        <ul>
+            <li>${myMagicCard.text.ability.description}</li>
+            <li>${myMagicCard.text.ability.manaCost}</li>
+            <li>${myMagicCard.text.ability.tappable}</li>
+        </ul>
+    </li>
+    <li>Flavor text: <em>${myMagicCard.text.flavorText}</em></li>
+    <li>Card artist: ${myMagicCard.artist.name} ${myMagicCard.artist.surname}</li>
+    <li>Card Number: ${myMagicCard.number}</li>
+    <li>Card S/C: ${myMagicCard.strenght}/${myMagicCard.constitution}</li>
+    <li>Border color: ${myMagicCard.border}</li>
+</ul>
+`
+;
+
+document.getElementById('ms_card').innerHTML += cardHTML;
